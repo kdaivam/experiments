@@ -1,0 +1,9 @@
+pip install cryptography
+
+$ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+
+airflow initdb
+
+airflow webserver -D
+
+airflow scheduler -D
