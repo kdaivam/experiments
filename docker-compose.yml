@@ -1,0 +1,19 @@
+version: '2'
+services:    
+  webserver:
+    image: firebet-airflow:latest
+    restart: always    
+    environment:
+      - LOAD_EX=n
+      - EXECUTOR=Local
+      - FERNET_KEY=m3_GbFtogCGk2UqUGZOVkFuLoqSA0PgHwDV2YFcXx4A=
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=postgres
+      - POSTGRES_HOST=10.0.75.2
+      - POSTGRES_PORT=54320
+
+    ports:
+      - "8087:8080" 
+    
+    
